@@ -13,14 +13,14 @@ contract NFT_IPFS is ERC721Enumerable, Ownable {
      */
     string _baseTokenURI;
 
-    //  _price is the price of one LW3Punks NFT
+    //  _price is the price of one NFT NFT
     uint256 public _price = 0.01 ether;
 
     // _paused is used to pause the contract in case of an emergency
     bool public _paused;
 
-    // max number of LW3Punks
-    uint256 public maxTokenIds = 10;
+    // max number of NFT
+    uint256 public maxTokenIds = 3;
 
     // total number of tokenIds minted
     uint256 public tokenIds;
@@ -32,10 +32,10 @@ contract NFT_IPFS is ERC721Enumerable, Ownable {
 
     /**
      * @dev ERC721 constructor takes in a `name` and a `symbol` to the token collection.
-     * name in our case is `LW3Punks` and symbol is `LW3P`.
-     * Constructor for LW3P takes in the baseURI to set _baseTokenURI for the collection.
+     * name in our case is `NFT` and symbol is `NFT`.
+     * Constructor for NFT takes in the baseURI to set _baseTokenURI for the collection.
      */
-    constructor(string memory baseURI) ERC721("LW3Punks", "LW3P") {
+    constructor(string memory baseURI) ERC721("NFT", "NFT_Caufman") {
         _baseTokenURI = baseURI;
     }
 
@@ -43,7 +43,7 @@ contract NFT_IPFS is ERC721Enumerable, Ownable {
      * @dev mint allows an user to mint 1 NFT per transaction.
      */
     function mint() public payable onlyWhenNotPaused {
-        require(tokenIds < maxTokenIds, "Exceed maximum LW3Punks supply");
+        require(tokenIds < maxTokenIds, "Exceed maximum NFT supply");
         require(msg.value >= _price, "Ether sent is not correct");
         tokenIds += 1;
         _safeMint(msg.sender, tokenIds);
