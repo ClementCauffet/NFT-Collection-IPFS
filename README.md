@@ -9,6 +9,7 @@ Deployed on the Mumbai testnet (general idea is to explain how value is created 
 - PNG stored on IPFS
 - Metadata (JSON) stored on IPFS
 - NFT created from the smart-contract (Solidity)
+- dApp using reactJS to interract with the smart contract
 
 Try running some of the following tasks:
 
