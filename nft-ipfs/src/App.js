@@ -3,6 +3,9 @@ import React, { useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
 import { abi, NFT_CONTRACT_ADDRESS } from "./constants.js";
 import Head from "next/head";
+import "./App.css";
+import twitter from "./img/twitter.png";
+import linkedin from "./img/linkedin.png";
 
 export default function Home() {
   // walletConnected keep track of whether the user's wallet is connected or not
@@ -161,7 +164,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>NFTs on IPFS by Caufman</title>
+        <title>NFT on IPFS by Clement Cauffet</title>
         <meta
           name="description"
           content="Clement Cauffet dApp NFT Collection IPFS"
@@ -170,7 +173,7 @@ export default function Home() {
       </Head>
       <div className="main">
         <div>
-          <h1 className="title">NFTs on IPFS by Caufman !</h1>
+          <h1 className="title">NFTs on IPFS by Clement Cauffet !</h1>
           <div className="description">Fully decentralized NFT Collection</div>
           <div className="description">{tokenIdsMinted}/3 have been minted</div>
           {renderButton()}
@@ -179,10 +182,10 @@ export default function Home() {
 
       <footer className="footer">
         <a href="https://www.linkedin.com/in/cl%C3%A9ment-cauffet-3b19a7187/">
-          <img src="/linkedin.svg" alt="LinkedIn" />
+          <img src={linkedin} alt="LinkedIn" className="img" />
         </a>
         <a href="https://twitter.com/ClementCauffet">
-          <img src="/twitter.svg" alt="Twitter" />
+          <img src={twitter} alt="Twitter" className="img" />
         </a>
       </footer>
     </div>
