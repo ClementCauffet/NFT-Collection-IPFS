@@ -173,7 +173,7 @@ export default function Home() {
       </Head>
       <div className="main">
         <div>
-          <h1 className="title">NFTs on IPFS by Clement Cauffet !</h1>
+          <h1 className="title">NFT on IPFS by Clement Cauffet !</h1>
           <div className="description">Fully decentralized NFT Collection</div>
           <div className="description">{tokenIdsMinted}/3 have been minted</div>
           {renderButton()}
