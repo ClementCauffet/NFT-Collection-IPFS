@@ -10,6 +10,8 @@ Deployed on the Mumbai testnet (general idea is to explain how value is created 
 - Metadata (JSON) stored on IPFS
 - NFT created from the smart-contract (Solidity)
 - dApp using reactJS to interract with the smart contract
+- Docker Image generated
+- [WIP] dApp will be running on Flux Decentralized Cloud Infrastructure to make the project fully decentralized
 
 Try running some of the following tasks to test the smart-contract on your own:
 
